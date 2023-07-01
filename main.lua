@@ -3,7 +3,7 @@
 ]]
 parser = require 'parser'
 
-local data = io.open('Test.fox')
+local data = io.open('Test.fb')
     for l in data:lines() do
         parser:run(l)
     end
