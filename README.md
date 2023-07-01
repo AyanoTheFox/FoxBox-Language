@@ -1,4 +1,5 @@
 # FoxBox Language
+![Logo](./Logo.png)
  Created on day __24th juny 2023__ by **ayano the fox** with help of **choco** built with the lua language the fb(FoxBox) language is a languague of compact informations that has no processing instructions executions intended for informations trades that only works on lua languague with the script of play
 
 # Features/commands
