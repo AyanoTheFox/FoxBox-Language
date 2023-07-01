@@ -8,7 +8,7 @@
  > - boolean number or word
  > - simple sintax
 
-# How works?
+# How it works?
  is just say than a var is equal a valid value type, see the exemple:
 
 ```
