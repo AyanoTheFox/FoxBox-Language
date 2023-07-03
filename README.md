@@ -1,7 +1,7 @@
 # FoxBox Language
 ![Logo](./Logo.png)
 
- Created on day __24th juny 2023__ by **ayano the fox** with help of **choco** built with the lua language the fb(FoxBox) v 0.3 language is a languague independent language of compact informations that has no processing instructions executions intended for informations trades that only works on lua languague with the script of play
+ Created on day __24th juny 2023__ by **ayano the fox** with help of **choco** built with the lua language the fb(FoxBox) v 0.3 language is a languague of compact informations that has no processing instructions executions intended for informations trades that only works on lua languague with the script of play
 
 # Features/commands
  > - Types of vars: int, float, str, char, bool, unsigned int, unsigned float, signed int, signed float
