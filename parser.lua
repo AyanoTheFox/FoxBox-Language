@@ -2,11 +2,12 @@ require 'Addons/string'
 parser = {}
 
 function parser:run(cmd)
-    if cmd then
-        local token = string.split(cmd, ';')
+    if not cmd:match('^%s*$') then
+        local commentary = string.split(cmd, '?')
+        local token = string.split(commentary[1], ';')
         
         for t = 1, #token do
-            if token[t]:gmatch('=') then
+            if token[t]:match('=') then
                 local memb = string.split(token[t], '=')
                 local param = string.split(memb[2], '%s')
                 
@@ -145,7 +146,16 @@ function parser:run(cmd)
                         error("unexpected signed type")
                     end
                 elseif param[1] == 'str:' then
-                    local str = (string.between(memb[2], '"', '"')[1] or string.between(memb[2], "'", "'")[1])
+                    local str
+                    
+                    if string.between(memb[2], "'", "'")[1]:match('"(.+)"') then
+                        str = string.between(memb[2], "'", "'")[1]
+                    elseif string.between(memb[2], '"', '"')[1]:match("'(.+)'") then
+                        str = string.between(memb[2], '"', '"')[1]
+                    else
+                        str = string.between(memb[2], '"', '"')[1] or string.between(memb[2], "'", "'")[1]
+                    end
+                    
                     
                     if not param[2] then
                         error("expected string got nil")
