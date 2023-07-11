@@ -1,26 +1,36 @@
 ?numbers
-numb = int: 1; numb2 = 2
-int expression = int: 1 + 2
-positive = unsigned int: 4
-negative = signed int: -5
+numb = int 1; numb2 = int 2
+int expression = int 1 + 2
+positive = unsigned int 4
+negative = signed int -5
 
-decimal = float: 1.0
-decimal expression = float: 1.2 + 1.3
-positive decimal = unsigned float: 2.0
-negative decimal = signed float: -3.0
+decimal = float 6.0
+decimal expression = float 5.5 + 1.5
+positive decimal = unsigned float 8.0
+negative decimal = signed float -9.0
 
 ?strings
-string = str: "'choco' is fine"
-string2 = str: '"fox" likes choco'
-char = char: "'"
-char2 = char: '"'
+string = str "'choco' is fine"
+string2 = str '"fox" likes choco'
+char = char "'"
+char2 = char '"'
 
-?booleans
-boolean = bool: false
-boolean2 = bool: true
-boolean3 = bool: 1
-boolean4 = bool: 0
+?boolean
+boolean = bool false
+boolean2 = bool true
+boolean3 = bool 1
+boolean4 = bool 0
 
 ?vars
 var = numb
 var expression = numb + positive
+
+?tables
+table = tbl
+table.item = int 2
+table.item2 = float 3.2
+table.item3 = char "'"
+table.item4 = bool false
+table.item5 = unsigned int 8
+table.item6 = signed int -9
+table.item7 = str 'manda is fine too'

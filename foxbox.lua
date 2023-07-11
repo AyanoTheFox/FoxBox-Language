@@ -9,11 +9,10 @@ function foxbox.decode(file)
         error("userdata expected got nil")
     end
     
-    local t, data = {}, io.open(file)
-    for l in data:lines() do
+    local t = {}
+    for l in io.lines(file) do
         t = parser:run(l)
     end
-    data:close()
     return t
 end
 

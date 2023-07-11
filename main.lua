@@ -1,6 +1,9 @@
+require 'Addons/string'
+require 'Addons/toboolean'
 foxbox = require 'foxbox'
 vars = foxbox.decode('Test.fb')
-
+a = 1
+print(debug.getlocal(a, 1))
 function getTableContent(tbl, indent)
     if not indent then 
         indent = 0 
